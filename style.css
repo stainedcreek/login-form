@@ -1,0 +1,80 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+
+.box{
+  width: 300px;
+  padding: 40px;
+  /* 用position才能接續用top,bottom......等設定 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* translate(ox,oy)
+指定元素由參考點 2D 橫向移動 ox 距離、縱向移動 oy 距離，等於是結合 translateX(ox), translateY(oy) 。 */
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  /* font-weight 常用設定値解說
+normal：也就是預設字體厚度，其實可以不用特別寫出來。
+bold：常用的粗體字。
+bolder：比粗體更粗一點。
+lighter：比一般字體更細。
+100~900：數字越大越厚，數字小於 500 似乎效果不明顯。 */
+}
+
+.box input[type = "text"], .box input[type = "password"]{
+  border: 0;
+  background: none;
+  /* display:block - 區塊，元素會以區塊方式呈現，除非設定 position 或 float。
+display:inline - 所有文字或圖片均不換行，也就是全部都會是同一行的意思。 */
+  display: block;
+  /* 語法範例
+margin:上 右 下 左;　margin:上下 左右;　margin:上 左右 下;　margin:四個邊同樣値;
+margin:auto; 代表讓瀏覽器自己去設定 */
+  margin: 20px auto;
+  text-align: center;
+  /* border: 邊框粗細 邊框樣式 邊框顏色 ; */
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  /* outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用 */
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.box input[type = "submit"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  /* CSS 語法裡面有一個還滿好玩的功能「cursor 屬性」可以改變滑鼠游標的形狀， 設定在文字或圖片上面，當滑鼠移上去時，就可以看到滑鼠游標的形狀~ */
+  cursor: pointer;
+}
+
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
